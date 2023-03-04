@@ -1,0 +1,28 @@
+.primary__filter {
+  display: inline-flex;
+  margin-bottom: 5.5rem;
+  position: relative;
+  width: 100%;
+
+  &__input {
+    border: 0.08rem lightgray solid;
+    border-radius: 6px;
+    font-size: 18px;
+    margin: 0 1.5rem auto;
+    outline-color: var(--color-navy-blue);
+    padding: 0.8rem 10rem 0.8rem 0.8rem;
+    &::placeholder {
+      color: var(--color-light-gray);
+    }
+  }
+
+  &__counter {
+    border-radius: 10px;
+    background-color: var(--color-navy-blue);
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+    margin: auto 0 auto auto;
+    padding: 0.2rem 0.5rem;
+  }
+}
