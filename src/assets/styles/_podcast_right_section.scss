@@ -1,0 +1,41 @@
+.podcast__table {
+  &__container {
+    border-radius: 0.2rem;
+    box-shadow: 0 5px 10px 1px rgba(0, 0, 0, 0.2);
+    margin: 0 0 5rem 5rem;
+    padding: 1.5rem;
+  }
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+
+    & thead tr {
+      border-bottom: 10px solid white;
+    }
+
+    & thead th {
+      color: black;
+      cursor: default;
+      text-align: left;
+      padding: 0.5rem;
+    }
+
+    & tbody tr {
+      color: var(--color-navy-blue);
+      transition: all 0.1s ease-in-out;
+
+      &:nth-child(odd) {
+        background-color: var(--color-pod-white);
+      }
+      &:hover {
+        background-color: var(--color-yellow);
+        color: var(--color-dark-blue);
+      }
+    }
+    & td {
+      cursor: pointer;
+      padding: .5rem;
+      width: 80%;
+    }
+  }
+}

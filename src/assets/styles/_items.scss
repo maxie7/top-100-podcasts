@@ -1,0 +1,53 @@
+.primary {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  &__card {
+    border-radius: .2rem;
+    box-shadow: 0 5px 10px 1px rgba(0, 0, 0, .3);
+    padding: 0 1.5rem;
+    margin: 1rem 1rem 10rem 1rem;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+    width: 15rem;
+
+    & a {
+      text-decoration: none;
+    }
+
+    &__image {
+      max-width: 8rem;
+      display: flex;
+      margin: -4rem auto 0;
+      border-radius: 100%;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:hover {
+      background-color: var(--color-yellow);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, .4);
+      cursor: pointer;
+
+      .primary__card__image {
+        box-shadow: 0 -4px 10px rgba(0, 0, 0, .7);
+      }
+
+      .primary__card__title, .primary__card__author {
+        color: var(--color-dark-blue);
+      }
+    }
+
+    &__title {
+      color: var(--color-dark-gray);
+      font-size: 1rem;
+      margin: .5rem auto;
+      text-align: center;
+    }
+
+    &__author {
+      font-size: 1rem;
+      color: var(--color-light-gray);
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.podcast__left_section {
+  border-radius: .2rem;
+  box-shadow: 0 5px 10px 1px rgba(0, 0, 0, 0.2);
+  margin: 1rem 0;
+  padding: 1rem .5rem;
+  position: absolute;
+  text-align: center;
+  width: 15rem;
+
+  &__image {
+    border-radius: .3rem;
+    margin-bottom: .5rem;
+  }
+  &__text {
+    text-align: left;
+    word-wrap: break-word;
+
+    &__name {
+      line-height: 1rem;
+      margin: .6rem .4rem;
+      margin-block-start: 1rem;
+      margin-block-end: .5rem;
+    }
+    &__artist {
+      color: var(--color-dark-gray);
+      font-style: italic;
+      margin: .6rem .4rem;
+      margin-block-start: 0;
+      margin-block-end: 1rem;
+    }
+    &__description {
+
+      &__title {
+        color: var(--color-dark-gray);
+        margin: 1.8rem .4rem;
+        margin-block-end: .6rem;
+      }
+
+      &__text {
+        color: var(--color-dark-gray);
+        font-style: italic;
+        font-weight: 400;
+        margin: 0 .4rem;
+        margin-block-start: 0;
+        margin-block-end: 0;
+      }
+    }
+  }
+}
