@@ -5,7 +5,7 @@ import PodcastChapter from './pages/PodcastChapter';
 
 function App () {
   return (
-    <BrowserRouter basename="/mini-podcast">
+    <BrowserRouter basename="/">
       <Routes>
         <Route path="/" element={<PodcastListPage />} />
         <Route path="/podcast/:id" element={<PodcastDetailsPage />} />
