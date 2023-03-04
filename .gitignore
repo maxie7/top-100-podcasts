@@ -11,13 +11,19 @@
 # production
 /build
 
+# IDEs: WebStorm
+.idea
+
 # misc
 .DS_Store
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
+.env
+.tool-versions
 
 npm-debug.log*
+package-lock.json
 yarn-debug.log*
 yarn-error.log*
