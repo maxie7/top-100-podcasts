@@ -35,4 +35,14 @@ While developing the following stack was used:
 | Zustand    | 4.35.5  | State management |
 | ESLint     | 8.0.1   | Code formatter   |
 | Jest       | 29.4.3  | Testing          |
+| Yarn       | 1.22.19 | Package manager  |
+
+### Steps to start the project locally (dev):
+
+- `yarn` (install deps)
+- `yarn start` (start up local server and view/use app)
+
+### Production version
+
+For deployment & minification **[NETLIFY](https://www.netlify.com)** service is used
 
