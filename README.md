@@ -46,10 +46,24 @@ While developing the following stack was used:
 
 For deployment & minification **[NETLIFY](https://www.netlify.com)** service is used
 
+See prod version >> [click here](https://aquamarine-pastelito-b19eb5.netlify.app) <<
+
 Minify JS and CSS:
 
 ![image](https://user-images.githubusercontent.com/15796607/222984613-f9785083-d00a-4a3d-8278-8f77a672ccfa.png)
 
+#### The CORS issue
 
+For getting podcast details we need to overcome CORS problem.
+It's resolved with Netlify config. See `netlify.toml` file in the project root.
+
+If you still notice that some chapters/episodes of podcasts are not shown
+you can use this Chrome extension: _[Moesif Origin & CORS Changer](https://chrome.google.com/webstore/detail/moesif-origin-cors-change/digfbfaphojjndkpccljibejjbppifbc)_
+
+### Tests
+
+There're also some tests in the project.
+For running them just execute: 
+`yarn test`
 
 
