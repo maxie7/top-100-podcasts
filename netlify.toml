@@ -1,0 +1,10 @@
+[[redirects]]
+  from = "/chapters"
+  to = "https://itunes.apple.com/lookup"
+  status = 200
+  force = true
+  headers = {X-Form = "Netlify"}
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
