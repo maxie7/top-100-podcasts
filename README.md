@@ -64,6 +64,9 @@ you can use this Chrome extension: _[Moesif Origin & CORS Changer](https://chrom
 
 There're also some tests in the project.
 For running them just execute: 
+
 `yarn test`
+
+![image](https://user-images.githubusercontent.com/15796607/222985322-6e0b83c5-d0e1-4157-bdbd-48ca759bec00.png)
 
 
