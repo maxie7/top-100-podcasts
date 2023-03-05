@@ -20,3 +20,19 @@ This application shows top 100 podcasts according to apple iTunes.
 ![page_03](https://user-images.githubusercontent.com/15796607/222983059-e6aecb7e-7139-461a-8079-ff35ab9863fe.png)
 
 
+## Installation
+
+### Prerequisites
+While developing the following stack was used:
+
+| Technology | Version | Description      |
+|------------|---------|------------------|
+| Node JS    | 19.7.0  | JS engine        |
+| React      | 18.2.0  | Main tech stack  |
+| Axios      | 1.3.4   | Requests         |
+| PropTypes  | 15.8.1  | Handle types     |
+| Sass       | 1.58.3  | CSS              |
+| Zustand    | 4.35.5  | State management |
+| ESLint     | 8.0.1   | Code formatter   |
+| Jest       | 29.4.3  | Testing          |
+
