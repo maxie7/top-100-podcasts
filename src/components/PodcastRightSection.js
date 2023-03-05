@@ -1,14 +1,9 @@
 import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { formatDuration } from '../utils/helpers';
 
 const PodcastRightSection = ({ chapters, id }) => {
   const navigate = useNavigate();
-  function formatDuration (ms) {
-    const seconds = Math.trunc(ms / 1000);
-    const date = new Date(null);
-    date.setSeconds(seconds);
-    return date.toISOString().slice(11, 19);
-  }
   const handleEpisodeClick = (e, chapterId) => {
     e.preventDefault();
     navigate(`/podcast/${id}/chapter/${chapterId.replace(/[:/]/gi, '')}`);
