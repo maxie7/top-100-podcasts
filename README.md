@@ -46,3 +46,10 @@ While developing the following stack was used:
 
 For deployment & minification **[NETLIFY](https://www.netlify.com)** service is used
 
+Minify JS and CSS:
+
+![image](https://user-images.githubusercontent.com/15796607/222984613-f9785083-d00a-4a3d-8278-8f77a672ccfa.png)
+
+
+
+
