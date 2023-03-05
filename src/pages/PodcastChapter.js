@@ -28,7 +28,9 @@ const PodcastChapter = () => {
     }
   }, []);
 
+  console.log('BEFORE: ', result[0].description);
   const description = htmlDecode(result[0].description);
+  console.log('AFTER: ', description);
 
   return (
     <>
@@ -36,7 +38,9 @@ const PodcastChapter = () => {
       <PodcastLeftSection />
       <div className="chapter__container">
         <h2>{result[0].trackName}</h2>
-        <div className="chapter__container__description" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(description) }} />
+        <div className="chapter__container__description">
+          <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(description) }}></div>
+        </div>
         <audio controls>
           <source src={result[0].episodeUrl} type="audio/mpeg" />
         </audio>
