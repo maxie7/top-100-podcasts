@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render ChapterCount section 1`] = `
+<h2
+  className="podcast__counter"
+>
+  Episodes: 
+   
+</h2>
+`;

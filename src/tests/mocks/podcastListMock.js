@@ -1,5 +1,7 @@
 export const podcastList = [
   {
+    data:
+  {
     feed: {
       author: {
         name: {
@@ -202,5 +204,6 @@ export const podcastList = [
         label: 'https://mzstoreservices-int.dslb.apple.com/us/rss/toppodcasts/limit=2/genre=1310/json'
       }
     }
+  }
   }
 ];

@@ -28,9 +28,7 @@ const PodcastChapter = () => {
     }
   }, []);
 
-  console.log('BEFORE: ', result[0].description);
   const description = htmlDecode(result[0].description);
-  console.log('AFTER: ', description);
 
   return (
     <>

@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Header section 1`] = `
+<nav
+  className="header"
+>
+  <div
+    className="header__section"
+  >
+    <Link
+      className="header__link"
+      to="/"
+    >
+      <h2
+        className="header__link__title"
+      >
+        Top-100 Podcasts
+      </h2>
+    </Link>
+  </div>
+  <div
+    className="header__loader"
+  >
+    <div
+      className="inner one"
+    />
+    <div
+      className="inner two"
+    />
+    <div
+      className="inner three"
+    />
+  </div>
+</nav>
+`;

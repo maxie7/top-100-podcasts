@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PodcastListPage component should render component Podcast List Page 1`] = `
+<React.Fragment>
+  <Header
+    isLoaded={false}
+  />
+  <div
+    className="primary"
+  >
+    <PodcastListFilter
+      podcastsLength={0}
+      query=""
+      setQuery={[Function]}
+    />
+    <PodcastListItems
+      items={Array []}
+      query=""
+    />
+  </div>
+</React.Fragment>
+`;
