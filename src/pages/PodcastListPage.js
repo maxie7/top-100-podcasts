@@ -23,7 +23,7 @@ const PodcastListPage = () => {
         setPodcasts(podcastsData);
         setItems(podcastsData.data.feed.entry);
         setIsLoaded(true);
-      };
+      }
     };
 
     if (!podcasts || now > podcasts.expiry) {
