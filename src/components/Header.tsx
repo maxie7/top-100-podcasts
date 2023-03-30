@@ -1,7 +1,12 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
-const Header = ({ isLoaded }) => {
+type Props = {
+    isLoaded: boolean
+};
+
+const Header = ({ isLoaded }: Props) => {
   const loader = () => {
     if (!isLoaded) {
       return (
@@ -24,10 +29,6 @@ const Header = ({ isLoaded }) => {
       {loader()}
     </nav>
   );
-};
-
-Header.propTypes = {
-  isLoaded: PropTypes.bool
 };
 
 export default Header;
