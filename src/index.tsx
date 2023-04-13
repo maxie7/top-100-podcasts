@@ -5,7 +5,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import '../src/assets/styles/styles.scss';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
+
 root.render(
   <BrowserRouter basename="/">
     <App />

@@ -5,7 +5,7 @@ import PodcastListFilter from '../components/PodcastListFilter';
 import { getInitialValues } from '../utils/getInitialValues';
 import { getPodcasts } from '../core/application/getPodcastsService';
 
-const PodcastListPage = () => {
+const PodcastListPage = (): JSX.Element => {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState([]);
@@ -35,7 +35,7 @@ const PodcastListPage = () => {
   }, []);
 
   if (error) {
-    return console.log('REQ ERROR:', error);
+    return <div>Request Error: {error}</div>;
   } else {
     return (
       <>

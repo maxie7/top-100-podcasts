@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import DOMPurify from 'dompurify';
 import { useParams } from 'react-router-dom';
 import usePodcastStore from '../core/infrastructure/state';
@@ -6,13 +6,13 @@ import Header from '../components/Header';
 import PodcastLeftSection from '../components/PodcastLeftSection';
 import { htmlDecode } from '../utils/htmlDecoder';
 
-const PodcastChapter = () => {
+const PodcastChapter = (): JSX.Element => {
   const [isLoaded, setIsLoaded] = useState(false);
   const { podcast } = usePodcastStore();
   const params = useParams();
-  const podcastItem = podcast.id ?? JSON.parse(localStorage.getItem('PodcastData')).id;
-  const chapterList = JSON.parse(localStorage.getItem(podcastItem));
-  const result = chapterList.value.filter((item) => item.trackId.toString().replace(/[:/]/gi, '') === params.id);
+  const podcastItem = podcast.id ?? JSON.parse(localStorage.getItem('PodcastData') || '').id;
+  const chapterList = JSON.parse(localStorage.getItem(podcastItem) || '');
+  const result = chapterList.value.filter((item: any = {}) => item.trackId.toString().replace(/[:/]/gi, '') === params.id);
 
   useEffect(() => {
     const onPageLoad = () => {

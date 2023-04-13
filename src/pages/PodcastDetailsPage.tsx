@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import usePodcastStore from '../core/infrastructure/state';
 import Header from '../components/Header';
@@ -7,20 +7,20 @@ import PodcastLeftSection from '../components/PodcastLeftSection';
 import PodcastRightSection from '../components/PodcastRightSection';
 import { getPodcastChapters } from '../core/application/getPodcastChaptersService';
 
-const PodcastDetailsPage = () => {
+const PodcastDetailsPage = (): JSX.Element => {
   const { podcast } = usePodcastStore();
-  const { id } = useParams();
-  const stored = localStorage.getItem('podcastsList');
-  const getStoredPodcast = JSON.parse(stored).value.filter((item) => item.id.attributes['im:id'] === id);
+  const { id } = useParams<{id: string | ''}>();
+  const stored = localStorage.getItem('podcastsList') || '';
+  const getStoredPodcast = JSON.parse(stored).value.filter((item: any = {}) => item.id.attributes['im:id'] === id);
   const [chapters, setChapters] = useState(0);
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     const now = new Date().getTime();
-    const storedId = localStorage.getItem(id);
-    const storedPodcastItem = JSON.parse(localStorage.getItem('PodcastData')).id;
+    const storedId = localStorage.getItem(id ?? '');
+    const storedPodcastItem = JSON.parse(localStorage.getItem('PodcastData') || '').id;
 
-    const getChaptersData = async (id) => {
+    const getChaptersData = async (id: string | '') => {
       const chaptersData = await getPodcastChapters(id);
       chaptersData.shift();
       const chapters = {
@@ -34,7 +34,7 @@ const PodcastDetailsPage = () => {
     };
 
     if (!storedId || now > JSON.parse(storedId).expiry) {
-      getChaptersData(id);
+      getChaptersData(id ?? '');
     } else if (storedPodcastItem !== id) {
       localStorage.setItem('PodcastData', JSON.stringify(podcast));
       setChapters(JSON.parse(storedId).value);
@@ -59,7 +59,7 @@ const PodcastDetailsPage = () => {
         </div>
       </>
     );
-  } catch (error) {
+  } catch (error: any) {
     console.log(error.message);
     return (
       <>
