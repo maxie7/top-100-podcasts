@@ -1,9 +1,10 @@
+import React from 'react';
 import { Navigate, Routes, Route } from 'react-router-dom';
 import PodcastDetailsPage from './pages/PodcastDetailsPage';
 import PodcastListPage from './pages/PodcastListPage';
 import PodcastChapter from './pages/PodcastChapter';
 
-function App () {
+const App:React.FC = () => {
   return (
     <Routes>
       <Route path="/" element={<PodcastListPage />} />
@@ -12,6 +13,6 @@ function App () {
       <Route path="*" element={<Navigate to="/" />} />
     </Routes>
   );
-}
+};
 
 export default App;

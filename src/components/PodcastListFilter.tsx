@@ -1,7 +1,11 @@
+import React from 'react';
 import usePodcastStore from '../core/infrastructure/state';
-import PropTypes from 'prop-types';
 
-const PodcastListFilter = ({ query, setQuery }) => {
+type PodcastListFilterProps = {
+  setQuery: React.Dispatch<React.SetStateAction<string>>,
+  query: string
+}
+const PodcastListFilter = ({ query, setQuery }: PodcastListFilterProps) => {
   const { podcast } = usePodcastStore();
   const titlesQty = podcast.filteredTitles;
 
@@ -11,11 +15,6 @@ const PodcastListFilter = ({ query, setQuery }) => {
       <input className="primary__filter__input" type="text" placeholder="Filter podcasts..." defaultValue={query || ''} onChange={(e) => setQuery(e.target.value)} />
     </div>
   );
-};
-
-PodcastListFilter.propTypes = {
-  setQuery: PropTypes.func,
-  query: PropTypes.string
 };
 
 export default PodcastListFilter;

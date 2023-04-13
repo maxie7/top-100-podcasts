@@ -1,8 +1,9 @@
+import React from 'react';
 import usePodcastStore from '../core/infrastructure/state';
 
-const PodcastLeftSection = () => {
+const PodcastLeftSection:React.FC = () => {
   const { podcast } = usePodcastStore();
-  const stored = JSON.parse(localStorage.getItem('PodcastData'));
+  const stored = JSON.parse(localStorage.getItem('PodcastData') || '');
 
   return (
     <>

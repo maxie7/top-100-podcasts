@@ -1,10 +1,10 @@
 import React from 'react';
 
-type Props = {
+type ChapterCountProps = {
   countChapters: number
 };
 
-const ChapterCount = ({ countChapters }: Props) => (
+const ChapterCount = ({ countChapters }: ChapterCountProps) => (
     <h2 className="podcast__counter">Episodes: {countChapters}</h2>
 );
 

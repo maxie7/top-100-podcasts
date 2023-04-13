@@ -1,16 +1,20 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import usePodcastStore from '../core/infrastructure/state';
 import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
 
-const PodcastListItems = ({ items, query }) => {
+type PodcastListItemsProps = {
+  items: Array<object>,
+  query: string
+};
+
+const PodcastListItems = ({ items, query }: PodcastListItemsProps) => {
   const { podcast, setPodcast, setFilteredTitles } = usePodcastStore();
-  const search = (items) => {
-    return items.filter((item) =>
+  const search = (items: Array<object>) => {
+    return items.filter((item: any = {}) =>
       items.some(() => item['im:name'].label.toString().toLowerCase().includes(query) || item['im:artist'].label.toString().toLowerCase().includes(query))
     );
   };
-  const titles = search(items).map((item) => {
+  const titles = search(items).map((item: any = {}) => {
     const podcastId = item.id.attributes['im:id'];
     const handleClick = () => {
       setPodcast(podcastId, item['im:image'][2].label, item['im:name'].label, item['im:artist'].label, item.summary.label);
@@ -36,11 +40,6 @@ const PodcastListItems = ({ items, query }) => {
   } else {
     return <div className="primary">{titles}</div>;
   }
-};
-
-PodcastListItems.propTypes = {
-  items: PropTypes.array,
-  query: PropTypes.string
 };
 
 export default PodcastListItems;

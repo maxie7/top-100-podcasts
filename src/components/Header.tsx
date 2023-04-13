@@ -1,12 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import PropTypes from 'prop-types';
 
-type Props = {
+type HeaderProps = {
     isLoaded: boolean
 };
 
-const Header = ({ isLoaded }: Props) => {
+const Header = ({ isLoaded }: HeaderProps) => {
   const loader = () => {
     if (!isLoaded) {
       return (
