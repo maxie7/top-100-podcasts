@@ -10,8 +10,6 @@ const PodcastRightSection = ({ chapters, id }: PodcastRightSelectionProps) => {
   const navigate = useNavigate();
   const handleEpisodeClick = (e: React.MouseEvent<HTMLTableRowElement, MouseEvent>, chapterId: string) => {
     e.preventDefault();
-    console.log('type of chapterId', typeof chapterId);
-    console.log('type of e', e);
     navigate(`/podcast/${id}/chapter/${chapterId.replace(/[:/]/gi, '')}`);
   };
 
