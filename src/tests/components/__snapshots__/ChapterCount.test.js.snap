@@ -5,6 +5,5 @@ exports[`should render ChapterCount section 1`] = `
   className="podcast__counter"
 >
   Episodes: 
-   
 </h2>
 `;

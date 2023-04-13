@@ -9,7 +9,6 @@ exports[`PodcastListPage component should render component Podcast List Page 1`]
     className="primary"
   >
     <PodcastListFilter
-      podcastsLength={0}
       query=""
       setQuery={[Function]}
     />

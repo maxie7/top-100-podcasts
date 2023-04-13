@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from '../components/Header';
 import PodcastListItems from '../components/PodcastListItems';
 import PodcastListFilter from '../components/PodcastListFilter';
@@ -23,7 +23,7 @@ const PodcastListPage = () => {
         setPodcasts(podcastsData);
         setItems(podcastsData.data.feed.entry);
         setIsLoaded(true);
-      };
+      }
     };
 
     if (!podcasts || now > podcasts.expiry) {
@@ -41,7 +41,7 @@ const PodcastListPage = () => {
       <>
         <Header isLoaded={isLoaded} />
         <div className="primary">
-          <PodcastListFilter query={query} setQuery={setQuery} podcastsLength={items.length} />
+          <PodcastListFilter query={query} setQuery={setQuery} />
           <PodcastListItems items={items} query={query} />
         </div>
       </>

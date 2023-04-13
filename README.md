@@ -3,6 +3,8 @@
 ## Description
 This application shows top 100 podcasts according to apple iTunes.
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/449d1cbd-4ebf-4f90-ad25-5de96f94e1d2/deploy-status)](https://app.netlify.com/sites/aquamarine-pastelito-b19eb5/deploys)
+
 ### Component composition
 
 1. The main view components:

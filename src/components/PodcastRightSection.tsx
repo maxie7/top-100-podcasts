@@ -1,17 +1,23 @@
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import PropTypes from 'prop-types';
 import { formatDuration } from '../utils/helpers';
 
-const PodcastRightSection = ({ chapters, id }) => {
+type PodcastRightSelectionProps = {
+  chapters: number | Array<object>,
+  id: string
+}
+const PodcastRightSection = ({ chapters, id }: PodcastRightSelectionProps) => {
   const navigate = useNavigate();
-  const handleEpisodeClick = (e, chapterId) => {
+  const handleEpisodeClick = (e: React.MouseEvent<HTMLTableRowElement, MouseEvent>, chapterId: string) => {
     e.preventDefault();
+    console.log('type of chapterId', typeof chapterId);
+    console.log('type of e', e);
     navigate(`/podcast/${id}/chapter/${chapterId.replace(/[:/]/gi, '')}`);
   };
 
-  let chaptersTable = [];
+  let chaptersTable: Array<any> = [];
   if (Array.isArray(chapters)) {
-    chaptersTable = chapters.map((item) => {
+    chaptersTable = chapters.map((item: any = {}) => {
       const chapterId = item.trackId.toString();
       let duration = '--:--:--';
       if ('trackTimeMillis' in item) {
@@ -42,11 +48,6 @@ const PodcastRightSection = ({ chapters, id }) => {
       </table>
     </div>
   );
-};
-
-PodcastRightSection.propTypes = {
-  chapters: PropTypes.oneOfType([PropTypes.number, PropTypes.array]),
-  id: PropTypes.string
 };
 
 export default PodcastRightSection;
