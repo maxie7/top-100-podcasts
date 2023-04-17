@@ -8,7 +8,7 @@
   }
 }
 
-@container (max-width: 520px) {
+@media (max-width: 640px) {
   .podcast {
     flex-direction: column;
 

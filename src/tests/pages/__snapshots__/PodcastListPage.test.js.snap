@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PodcastListPage component should render component Podcast List Page 1`] = `
-<React.Fragment>
+<div
+  className="container"
+>
   <Header
     isLoaded={false}
   />
@@ -17,5 +19,5 @@ exports[`PodcastListPage component should render component Podcast List Page 1`]
       query=""
     />
   </div>
-</React.Fragment>
+</div>
 `;

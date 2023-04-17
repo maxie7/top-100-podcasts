@@ -48,7 +48,7 @@
   }
 }
 
-@container (max-width: 520px) {
+@media (max-width: 640px) {
   .podcast__left_section {
     box-shadow: none;
     margin: 0;

@@ -27,7 +27,7 @@
   }
 }
 
-@container (max-width: 520px) {
+@media (max-width: 640px) {
   .primary__filter {
     &__counter {
       font-size: 18px;

@@ -52,7 +52,7 @@
   }
 }
 
-@container (max-width: 520px) {
+@media (max-width: 640px) {
   .primary {
     &__card {
       margin: 1rem 1rem 4rem 1rem;
