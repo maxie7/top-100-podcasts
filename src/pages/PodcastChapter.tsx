@@ -31,7 +31,7 @@ const PodcastChapter = (): JSX.Element => {
   const description = htmlDecode(result[0].description);
 
   return (
-    <div className="container">
+    <>
       <Header isLoaded={isLoaded} />
       <PodcastLeftSection />
       <div className="chapter__container">
@@ -43,7 +43,7 @@ const PodcastChapter = (): JSX.Element => {
           <source src={result[0].episodeUrl} type="audio/mpeg" />
         </audio>
       </div>
-    </div>
+    </>
   );
 };
 
