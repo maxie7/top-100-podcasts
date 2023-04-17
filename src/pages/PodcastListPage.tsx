@@ -38,13 +38,13 @@ const PodcastListPage = (): JSX.Element => {
     return <div>Request Error: {error}</div>;
   } else {
     return (
-      <div className="container">
+      <>
         <Header isLoaded={isLoaded} />
         <div className="primary">
           <PodcastListFilter query={query} setQuery={setQuery} />
           <PodcastListItems items={items} query={query} />
         </div>
-      </div>
+      </>
     );
   }
 };
