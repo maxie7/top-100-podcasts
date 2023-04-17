@@ -47,3 +47,12 @@
     }
   }
 }
+
+@media (max-width: 640px) {
+  .podcast__left_section {
+    box-shadow: none;
+    margin: 0;
+    position: inherit;
+    width: auto;
+  }
+}

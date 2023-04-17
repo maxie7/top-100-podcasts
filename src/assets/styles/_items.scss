@@ -51,3 +51,16 @@
     }
   }
 }
+
+@media (max-width: 640px) {
+  .primary {
+    &__card {
+      margin: 1rem 1rem 4rem 1rem;
+      width: 7.2rem;
+
+      &__image {
+        margin: -4rem -6px 0;
+      }
+    }
+  }
+}

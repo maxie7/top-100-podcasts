@@ -16,17 +16,10 @@ export const API = {
     return response;
   },
 
-  async requestChapters (id) {
+  async requestChapters (id: string) {
     const response = await instanceCors.get(`/chapters?id=${id}&media=podcast&entity=podcastEpisode&limit=20`)
       .catch(error => error);
 
     return response;
   }
-
-  // async requestChapters (id) {
-  //   const response = await instance.get(`/lookup?id=${id}&media=podcast&entity=podcastEpisode&limit=20`)
-  //     .catch(error => error);
-  //
-  //   return response;
-  // }
 };

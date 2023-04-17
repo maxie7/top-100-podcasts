@@ -17,3 +17,14 @@
     }
   }
 }
+
+@media (max-width: 640px) {
+  .chapter {
+    &__container {
+      box-shadow: none;
+      margin: auto;
+      padding: .5rem;
+      width: auto;
+    }
+  }
+}
