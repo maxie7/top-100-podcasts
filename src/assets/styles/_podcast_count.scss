@@ -8,3 +8,10 @@
   right: 0;
   top: 0;
 }
+
+@container (max-width: 520px) {
+  .podcast__counter {
+    box-shadow: none;
+    margin: auto;
+  }
+}

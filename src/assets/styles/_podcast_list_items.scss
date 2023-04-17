@@ -7,3 +7,14 @@
     width: 80%;
   }
 }
+
+@container (max-width: 520px) {
+  .podcast {
+    flex-direction: column;
+
+    &__container {
+      margin: auto;
+      width: auto;
+    }
+  }
+}

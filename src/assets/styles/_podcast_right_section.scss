@@ -39,3 +39,13 @@
     }
   }
 }
+
+@container (max-width: 520px) {
+  .podcast__table {
+    &__container {
+      box-shadow: none;
+      margin: auto;
+      padding: .5rem;
+    }
+  }
+}

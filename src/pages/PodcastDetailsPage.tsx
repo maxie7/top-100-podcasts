@@ -48,7 +48,7 @@ const PodcastDetailsPage = (): JSX.Element => {
   try {
     const countChapters = Array.isArray(chapters) ? chapters.length : 0;
     return (
-      <>
+      <div className="container">
         <Header isLoaded={isLoaded} />
         <div className="podcast">
           <PodcastLeftSection />
@@ -57,7 +57,7 @@ const PodcastDetailsPage = (): JSX.Element => {
             <PodcastRightSection chapters={chapters} id={getStoredPodcast[0].id.attributes['im:id']} />
           </div>
         </div>
-      </>
+      </div>
     );
   } catch (error: any) {
     console.log(error.message);

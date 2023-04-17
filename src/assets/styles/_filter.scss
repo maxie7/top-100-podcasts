@@ -26,3 +26,15 @@
     padding: 0.2rem 0.5rem;
   }
 }
+
+@container (max-width: 520px) {
+  .primary__filter {
+    &__counter {
+      font-size: 18px;
+    }
+
+    &__input {
+      width: 140px;
+    }
+  }
+}
