@@ -7,18 +7,15 @@ type PodcastListFilterProps = {
 }
 const PodcastListFilter = ({ query, setQuery }: PodcastListFilterProps) => {
   const { podcast } = usePodcastStore();
-  const titlesQty = podcast.filteredTitles;
 
   return (
     <div className="primary__filter">
-      <div className="primary__filter__counter">{titlesQty}</div>
+      <div className="primary__filter__counter">{podcast.filteredTitles}</div>
       <input
         className="primary__filter__input"
         type="text" placeholder="Filter podcasts..."
         defaultValue={query || ''}
-        onChange={(e) => {
-          setQuery(e.target.value);
-        }} />
+        onChange={(e) => setQuery((e.target.value).toLowerCase())} />
     </div>
   );
 };
