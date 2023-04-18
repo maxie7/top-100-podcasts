@@ -1,6 +1,6 @@
-export const formatDuration = (ms) => {
+export const formatDuration = (ms: number) => {
   const seconds = Math.trunc(ms / 1000);
-  const date = new Date(null);
+  const date = new Date(+0);
 
   date.setSeconds(seconds);
   return date.toISOString().slice(11, 19);

@@ -12,7 +12,13 @@ const PodcastListFilter = ({ query, setQuery }: PodcastListFilterProps) => {
   return (
     <div className="primary__filter">
       <div className="primary__filter__counter">{titlesQty}</div>
-      <input className="primary__filter__input" type="text" placeholder="Filter podcasts..." defaultValue={query || ''} onChange={(e) => setQuery(e.target.value)} />
+      <input
+        className="primary__filter__input"
+        type="text" placeholder="Filter podcasts..."
+        defaultValue={query || ''}
+        onChange={(e) => {
+          setQuery(e.target.value);
+        }} />
     </div>
   );
 };
