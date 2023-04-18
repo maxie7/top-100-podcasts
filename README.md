@@ -30,6 +30,7 @@ While developing the following stack was used:
 | Technology | Version | Description      |
 |------------|---------|------------------|
 | Node JS    | 19.7.0  | JS engine        |
+| TypeScript | 5.0.2   | TypeScript       |
 | React      | 18.2.0  | Main tech stack  |
 | Axios      | 1.3.4   | Requests         |
 | PropTypes  | 15.8.1  | Handle types     |
